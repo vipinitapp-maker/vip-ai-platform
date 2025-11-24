@@ -1,0 +1,18 @@
+# Placeholder deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: placeholder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: placeholder
+  template:
+    metadata:
+      labels:
+        app: placeholder
+    spec:
+      containers:
+      - name: placeholder
+        image: nginx:alpine
